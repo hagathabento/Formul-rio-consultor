@@ -31,6 +31,15 @@ Formulário de página única para consultores (Diagnóstico e Testagem Molecula
    - `lgooservier.png` – logo Servier
    - `cover.png` – imagem de capa
 
+## Deploy (Vercel)
+
+No painel da Vercel, vá em **Settings → Environment Variables** e adicione:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+Sem essas variáveis, o build funciona mas o formulário não salva em produção.
+
 ## Uso
 
 - **Formulário:** [http://localhost:3000](http://localhost:3000)
