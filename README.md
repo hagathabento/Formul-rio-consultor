@@ -35,7 +35,7 @@ Formulário de página única para consultores (Diagnóstico e Testagem Molecula
 
 - **Formulário:** [http://localhost:3000](http://localhost:3000)
 - **Admin:** [http://localhost:3000/admin](http://localhost:3000/admin)  
-  Senha padrão: `servierhagatha`
+  (Configure a senha no código ou em variável de ambiente)
 
 ## Perguntas do formulário
 
