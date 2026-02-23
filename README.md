@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Formulário Consultor – Diagnóstico e Terapia Alvo
 
-## Getting Started
+Formulário de página única para consultores (Diagnóstico e Testagem Molecular, Terapia Alvo – Estudo AGILE, Percepção Geral do Debate).
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js 16
+- Tailwind CSS
+- Supabase (mesmo banco do formulario-hagatha)
+- Framer Motion
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Variáveis de ambiente**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   Crie ou edite `.env.local`:
 
-## Learn More
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=https://lvnqqbeldyihjjuixmsb.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Tabela no Supabase**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Execute o conteúdo de `supabase-schema.sql` no SQL Editor do Supabase para criar a tabela `consultor_submissions`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Logos e imagens**
 
-## Deploy on Vercel
+   As imagens do projeto original estão em `public/`:
+   - `image.png` – logo TIBSOVO
+   - `lgooservier.png` – logo Servier
+   - `cover.png` – imagem de capa
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Uso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Formulário:** [http://localhost:3000](http://localhost:3000)
+- **Admin:** [http://localhost:3000/admin](http://localhost:3000/admin)  
+  Senha padrão: `servierhagatha`
+
+## Perguntas do formulário
+
+1. Percepção sobre o que mais dificulta a solicitação imediata do teste molecular para LMA  
+2. Avaliação da segurança clínica durante o período de espera pelo resultado molecular  
+3. Fatores que influenciam a decisão terapêutica em pacientes com IDH1 mutado  
+4. Principais aprendizados ou percepções após o debate  
+5. Pontos que geraram maior engajamento ou debate  
+6. Temas a aprofundar em próximos encontros  
+7. Aceitação do formato de mesa redonda digitalizada  
+8. Sugestões, dúvidas e feedback  

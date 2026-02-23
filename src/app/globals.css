@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores Base do Produto TIBSOVO */
+  --tibsovo-purple: #4B2C78;
+  --tibsovo-purple-light: #6A44A3;
+  --tibsovo-orange: #FF6B4A;
+  --tibsovo-orange-hover: #E85A3C;
+  --tibsovo-bg: #2A1B45;
+
+  --foreground: #ffffff;
+  --background: var(--tibsovo-bg);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--tibsovo-purple);
+  --color-accent: var(--tibsovo-orange);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
   }
 }
 
+@keyframes spin-around {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 body {
-  background: var(--background);
+  background-color: var(--tibsovo-bg);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(106, 68, 163, 0.4), transparent 60%),
+              radial-gradient(circle at 80% 20%, rgba(255, 107, 74, 0.15), transparent 50%);
+  animation: move-bg 15s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes move-bg {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5%, -5%) scale(1.1); }
+}
+
+.input-custom {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.input-custom:focus {
+  outline: none;
+  border-color: var(--tibsovo-orange);
+  box-shadow: 0 0 20px rgba(255, 107, 74, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.animate-shimmer-slide {
+  animation: shimmer-slide 2.5s ease-in-out infinite;
+}
+.animate-spin-around {
+  animation: spin-around 1s linear infinite;
+}
+.animate-shine {
+  animation: shine 14s ease-in-out infinite;
 }
