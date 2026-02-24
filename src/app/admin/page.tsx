@@ -8,14 +8,12 @@ import clsx from 'clsx';
 
 const questionsLabels: Record<number, string> = {
   1: 'Dificuldade teste molecular LMA',
-  2: 'Segurança clínica durante espera',
   3: 'Fatores decisão terapêutica IDH1',
   4: 'Principais aprendizados',
   5: 'Ponto de maior engajamento',
-  6: 'Tema para aprofundar',
-  7: 'Formato mesa redonda digitalizada',
-  8: 'Sugestões e feedback',
 };
+
+const QUESTION_IDS = [1, 3, 4, 5];
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -202,7 +200,7 @@ export default function AdminPage() {
               <tr className="bg-gray-900/50 text-gray-400 text-xs uppercase tracking-wider">
                 <th className="p-3 border-b border-gray-700">Data</th>
                 <th className="p-3 border-b border-gray-700">Nome</th>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((q) => (
+                {QUESTION_IDS.map((q) => (
                   <th key={q} className="p-3 border-b border-gray-700 max-w-[180px]">
                     Q{q}
                   </th>
@@ -213,13 +211,13 @@ export default function AdminPage() {
             <tbody className="divide-y divide-gray-700">
               {loading ? (
                 <tr>
-                  <td colSpan={11} className="p-8 text-center text-gray-500">
+                  <td colSpan={7} className="p-8 text-center text-gray-500">
                     Carregando...
                   </td>
                 </tr>
               ) : submissions.length === 0 ? (
                 <tr>
-                  <td colSpan={11} className="p-8 text-center text-gray-500">
+                  <td colSpan={7} className="p-8 text-center text-gray-500">
                     Nenhuma submissão encontrada.
                   </td>
                 </tr>
@@ -232,7 +230,7 @@ export default function AdminPage() {
                       title="Nome"
                       onClick={() => setViewModalContent({ title: 'Nome', text: sub.name || '-' })}
                     />
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((qId) => (
+                    {QUESTION_IDS.map((qId) => (
                       <TruncatableCell
                         key={qId}
                         text={getAnswerText(sub, qId)}

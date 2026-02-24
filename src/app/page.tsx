@@ -16,12 +16,6 @@ const questions = [
     placeholder: 'Digite sua resposta aqui...',
   },
   {
-    id: 2,
-    section: 'Diagnóstico e Testagem Molecular',
-    question: '2. Como os médicos avaliam a segurança clínica durante o período de espera pelo resultado molecular?',
-    placeholder: 'Digite sua resposta aqui...',
-  },
-  {
     id: 3,
     section: 'Terapia Alvo – Estudo AGILE (IDH1 mutado)',
     question: '3. Após a discussão dos dados do AGILE, quais fatores parecem mais influenciar a decisão terapêutica em pacientes com IDH1 mutado?',
@@ -38,24 +32,6 @@ const questions = [
     section: 'Percepção Geral do Debate',
     question: '5. Houve algum ponto que gerou maior engajamento ou maior debate entre os participantes?',
     placeholder: 'Digite sua resposta aqui...',
-  },
-  {
-    id: 6,
-    section: 'Percepção Geral do Debate',
-    question: '6. Há algum tema que deveria ser aprofundado em próximos encontros?',
-    placeholder: 'Digite sua resposta aqui...',
-  },
-  {
-    id: 7,
-    section: 'Percepção Geral do Debate',
-    question: '7. Na sua percepção, o formato de mesa redonda digitalizada foi bem aceito e contribuiu para enriquecer a discussão?',
-    placeholder: 'Digite sua resposta aqui...',
-  },
-  {
-    id: 8,
-    section: 'Percepção Geral do Debate',
-    question: '8. Espaço aberto para sugestões, dúvidas, feedback do evento.',
-    placeholder: 'Digite sugestões, dúvidas ou feedback...',
   },
 ];
 
