@@ -150,9 +150,6 @@ export default function Home() {
                 </span>
               </ShimmerButton>
             </form>
-            <p className="text-[10px] md:text-xs text-gray-500/60 font-light uppercase tracking-wide">
-              Material destinado a profissionais de saúde habilitados a prescrever e dispensar medicamentos
-            </p>
           </ShineBorder>
         </motion.div>
       </div>
@@ -258,9 +255,6 @@ export default function Home() {
                 {!isSubmitting && <ChevronRight size={20} />}
               </span>
             </ShimmerButton>
-            <p className="text-[10px] md:text-xs text-gray-500/60 font-light uppercase tracking-wide text-center">
-              Material destinado a profissionais de saúde habilitados a prescrever e dispensar medicamentos
-            </p>
           </div>
         </footer>
       </form>
