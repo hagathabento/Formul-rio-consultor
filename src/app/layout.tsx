@@ -15,12 +15,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Formulário Consultor – Diagnóstico e Terapia Alvo",
   description: "Formulário de feedback para consultores – Diagnóstico e Testagem Molecular, Estudo AGILE (IDH1 mutado).",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Formulário Hagatha",
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: "#4B2C78",
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
