@@ -24,13 +24,13 @@ const questions = [
   {
     id: 4,
     section: 'Percepção Geral do Debate',
-    question: '4. Quais foram os principais aprendizados ou percepções após o debate?',
+    question: '3. Quais foram os principais aprendizados ou percepções após o debate?',
     placeholder: 'Digite sua resposta aqui...',
   },
   {
     id: 5,
     section: 'Percepção Geral do Debate',
-    question: '5. Houve algum ponto que gerou maior engajamento ou maior debate entre os participantes?',
+    question: '4. Houve algum ponto que gerou maior engajamento ou maior debate entre os participantes?',
     placeholder: 'Digite sua resposta aqui...',
   },
 ];

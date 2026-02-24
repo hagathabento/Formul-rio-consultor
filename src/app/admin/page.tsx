@@ -200,9 +200,9 @@ export default function AdminPage() {
               <tr className="bg-gray-900/50 text-gray-400 text-xs uppercase tracking-wider">
                 <th className="p-3 border-b border-gray-700">Data</th>
                 <th className="p-3 border-b border-gray-700">Nome</th>
-                {QUESTION_IDS.map((q) => (
-                  <th key={q} className="p-3 border-b border-gray-700 max-w-[180px]">
-                    Q{q}
+                {QUESTION_IDS.map((qId, i) => (
+                  <th key={qId} className="p-3 border-b border-gray-700 max-w-[180px]">
+                    Q{i + 1}
                   </th>
                 ))}
                 <th className="p-3 border-b border-gray-700 w-16 text-center">Ações</th>
