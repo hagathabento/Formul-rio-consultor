@@ -18,7 +18,7 @@ const questions = [
   {
     id: 3,
     section: 'Terapia Alvo – Estudo AGILE (IDH1 mutado)',
-    question: '3. Após a discussão dos dados do AGILE, quais fatores parecem mais influenciar a decisão terapêutica em pacientes com IDH1 mutado?',
+    question: '2. Após a discussão dos dados do AGILE, quais fatores parecem mais influenciar a decisão terapêutica em pacientes com IDH1 mutado?',
     placeholder: 'Digite sua resposta aqui...',
   },
   {
